@@ -1,0 +1,39 @@
+<div id="container">
+  <div class="left-column">
+    <input type='file' name='file' id="imgInp" accept="image/*" multiple size="1" onchange="readURL(this)"/>
+    <img class="biggerThanContainer" id="imagePreview" src="#" alt="your image">
+  </div>
+  <div class="right-column">
+    <h4>Recipe Name: </h4>
+    <input type="text" id="RecipeName" placeholder="Recipe Name" class="form-control" maxlength="18" required>
+    <div>
+      <h4>Recipe Summery: </h4>
+      <input type="text" id="RecipeSummery" placeholder="Recipe Summary(optional)" class="form-control" maxlength="11">
+    </div>
+
+    <div id="ingredients">
+      <h4>Recipe ingredients: </h4>
+      </div>
+      <button class="btn" onclick="addIngredient()">add</button>
+      <div>
+        <h4>Recipe serving: </h4>
+        <input type="number" id="makes">
+	    </div>
+      <div>
+        <h4>INSTRUCTIONS: </h4>
+        <textarea rows="1" cols="50" id="instructions" onkeyup="auto_grow(this)" style="resize: none;"></textarea>
+      </div>
+      <button type="submit" id="updateButton" class="btn btn-success">Save</button>
+  </div>
+
+  <script>
+        function auto_grow(element) {
+          element.style.height = "5px";
+          element.style.height = (element.scrollHeight)+"px";
+        }
+
+        function onPageLoded(){
+
+        }
+  </script>
+  <div id="container">

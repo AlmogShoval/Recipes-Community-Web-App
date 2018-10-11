@@ -1,0 +1,46 @@
+<div id="container">
+  <div class="left-column">
+      <h1> My Settings </h1>
+      <div>
+          <p> Username: <input autocomplete="false" id="UserName"></p>
+          <p> Password: <input autocomplete="false" type="password" id="Password" placeholder="******" required></p>
+          <button type="submit" onClick="ChangePassword()" class="btn" style="color: black; background-color: rgb(227,227,227);">Change my password</button>
+      </div>
+      <div>
+        <div style="display: inline-block;">
+        	<p> Security: </p>
+        </div>
+    	  <div style="display: inline-block; margin-left: 1cm;">
+        	<input type="radio" id="public" name="security" value="public" checked onclick="UpdateSecurity(true)"> public <br> <p style="color: rgb(167,167,167);">Everyone can watch your recipes, You can watch all public recipes. </p><br>
+    		<input type="radio" id="private" name="security" value="private" onclick="UpdateSecurity(false)"> private<br> <p style="color: rgb(167,167,167);"> All of your recipes are private, you can access only your own recipes. </p>
+       </div>
+       <div>
+       	<p>Changes:
+          <button type="submit" onClick="deleteUserRecipes()" class="btn" style="color: black; background-color: rgb(227,227,227);">Delete all Uploads</button>
+          <button type="submit" onClick="deleteUser()" class="btn" style="color: black; background-color: rgb(227,227,227);">Delete account</button>
+        </p>
+        </div>
+      </div>
+    </div>
+  <div class="right-column">
+    <h1> Manage Upload <button type="submit" onClick="addNewRecipe()" class="btn" style="margin-left: 50px;color: white; background-color: green;">NEW POST+</button> </h1>
+   <div>
+     <table id=feed>
+      <tbody id="MyRecipes">
+      </tbody>
+     </table>
+   </div>
+  </div>
+</div>
+
+<script>
+    function onPageLoded(){
+      document.getElementById("UserName").disabled = true;
+      document.getElementById("UserName").value = getCookie("userName");
+
+      setSecurity();
+
+      getMyItems(true);
+
+    }
+</script>

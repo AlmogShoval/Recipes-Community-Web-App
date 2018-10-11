@@ -1,0 +1,36 @@
+<nav class="navbar" role="navigation" style="height: 100px;">
+    <div>
+
+      <div id="logout" style="float:right;">
+        <button type="submit" onClick="goToInbox()" class="btn" style="color: black; background-color: rgb(227,227,227);">Inbox</button>
+        <button type="submit" onClick="Logout()" class="btn btn-success">Logout</button>
+      </div>
+
+      <ul id="pageNav" class="nav navbar-nav">
+      <li class="dropdown" style="float: left;">
+      <div>
+        <img src="photos/navbar-avocado.png">
+        <a class="dropdown-toggle" data-toggle="dropdown" ><img id="logo" src="photos/menu-icon.png"></a>
+          <ul class="dropdown-menu">
+              <li class="pageContent" id="uploadRecipe"><a href="#uploadRecipe">uploadRecipe</a> </li>
+              <li class="pageContent" id="RecipeFeed" ><a href="#RecipeFeed">RecipeFeed</a> </li>
+              <li class="pageContent" id="userWall" ><a href="#userWall">userWall</a> </li>
+            </ul>
+      </div>
+      </li>
+      </ul>
+
+      <script>
+      $("ul[id^=pageNav] li[class^=pageContent]").click(function(){
+          $('#pageNav .active').removeClass('active');
+          $(this).addClass('active');
+          $("#pageContent").load(this.id+ ".html", function(){
+            onPageLoded();
+          });
+      });
+
+      </script>
+        <input autocomplete="off" type="text" id="searchInput" onkeyup="search()" class="search left-column" name="search" placeholder="Search..">
+
+    </div>
+</nav>

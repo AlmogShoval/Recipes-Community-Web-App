@@ -1,0 +1,29 @@
+<div id="container">
+  <div class="left-column"> <img class="biggerThanContainer" id="imagePreview" src="#" alt="your image"> </div>
+  <div class="right-column">
+    <h1 id="RecipeName"><u> Recipe Name </u></h1>
+    <div id="ingredients">
+    </div>
+    <div style="margin-top: 1cm;">
+    	<p id="makes"><u>  Makes:	</u> 4 Serving </p>
+        <p> <u>Needed:</u>  <input type="text" id="Needed" placeholder="4" onfocusout="ChangeAmount(this.value)"><a onClick=""  style="width: 2%; color: black;"> ✔ </a></p>
+        <br>
+        <h4><u>INSTRUCTIONS: </u></h4>
+        <p id="instructions"></p>
+    </div>
+    <div>
+      <button type="submit" onClick="SharePopUp()" class="btn" style="color: black; background-color: rgb(227,227,227);">Share Recipe</button>
+    </div>
+    <div id="RecipeId" style="display: none"> </div>
+</div>
+</div>
+
+<script>
+  function SharePopUp(){
+    var user = prompt("Please enter the user name you want to share the recipe with:", "Harry Potter");
+    if (user == null || user == "") {}
+    else {
+      ShareWith(user);
+    }
+  }
+</script>

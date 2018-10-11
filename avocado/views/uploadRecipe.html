@@ -1,0 +1,82 @@
+<div id="container">
+  <h2 style="text-align:center; color:#5cb85c;">Upload a new recipe</h2>
+  <div class="left-column">
+  <hr>
+    <h4>Image: </h4>
+    <input type='file' name='file' id="imgInp" accept="image/*" multiple size="1" onchange="readURL(this)"/>
+    <img class="biggerThanContainer" id="imagePreview" src="#" alt="Image Preview">
+  </div>
+  <div class="right-column">
+    <hr>
+      <h4>Recipe Name: </h4>
+      <input type="text" id="RecipeName" placeholder="Recipe Name" class="form-control" maxlength="18" required>
+      <div>
+    <hr>
+        <h4>Recipe Summery: </h4>
+        <input type="text" id="RecipeSummery" placeholder="Recipe Summary(optional)" class="form-control" maxlength="11">
+      </div>
+    <hr>
+      <div id="ingredients">
+        <h4>Recipe ingredients: </h4>
+        <div>
+        <div class="ingredient">
+          <input type="number" id="Amount" placeholder ="1" style="width: 10%;">
+          <input id="tool" list="toolData" name="tool" style="width: 30%;" placeholder ="cup">
+              <datalist id="toolData">
+                <option value="cup">
+                <option value="teaspoons">
+                <option value="tablespoons">
+                <option value="oz">
+                <option value="gram">
+                <option value="kilogram">
+                <option value="pound">
+                <option value="ounce">
+              </datalist>
+          <input type="text" id="ingredient" placeholder="ingredient" style="width: 50%;">
+        </div>
+      </div>
+      </div>
+      <button class="btn" onclick="addIngredient()">add</button>
+    <hr>
+      <div>
+        <h4>Recipe serving: </h4>
+        <input type="number" id="makes" placeholder="1" required>
+	    </div>
+      <div>
+    <hr>
+        <h4>INSTRUCTIONS: </h4>
+        <textarea rows="1" cols="50" id="instructions" onkeyup="auto_grow(this)" style="resize: none;"></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-success" onclick="CheckValidation()">Create!</button>
+      <div><br></div>
+  </div>
+
+  <script>
+      function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight)+"px";
+      }
+
+      function CheckValidation(){
+          if(document.getElementById("imgInp").files.length === 0){
+            alert("You must upload image with your recipe")
+          }
+          else if(document.getElementById("RecipeName").value === ''){
+            alert("You must insert Recipe Name to your recipe")
+          }
+          else if(document.getElementById("Amount").value === '' || document.getElementById("ingredient").value === ''){
+            alert("You must insert ingredients to your recipe")
+          }
+          else if(document.getElementById("makes").value === '' ){
+            alert("You must fill the amount of serving of your recipe")
+          }
+          else{
+            postItem();
+          }
+      }
+
+      function onPageLoded(){
+
+      }
+  </script>

@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="jumbotron">
+      <div class="container" style="width:1400px">
+        <h3>Create new item:</h3>
+        <form class="navbar-form" role="form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="lastName" placeholder="Last Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="telepone" placeholder="Telepone" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="age" placeholder="Age" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="gender" placeholder="Gender" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success" onclick="postItem()">Create</button>
+          </form>
+      </div>
+    </div>
+
+    <div class="container" style="width:1200px">
+       <h1><u> Profiles: </u></h1>
+       <button type="submit" class="btn btn-success" onclick="getItems()">Show all items</button>
+        <table class="table">
+            <thead>
+                <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Tel.</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th> </th>
+                <th> </th>
+                </tr>
+         </thead>
+         <tbody id="itemsTable">
+
+         </tbody>
+        </table>
+
+      <hr>
+
+      <footer>
+      </footer>
+    </div>
+  </div>

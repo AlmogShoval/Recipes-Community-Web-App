@@ -1,0 +1,255 @@
+#container{
+  width:960px;
+  margin:0px auto;
+  position:relative;
+}
+
+.btn {
+  padding: 4px 6px;
+}
+
+.left-column{
+  width:456px;
+  float:left;
+  /*background:blue;*/
+  /*margin-left:5%;*/
+}
+
+.right-column{
+  width:456px;
+  float:left;
+  /*background:orange;*/
+  margin-left:5%;
+}
+
+.search{
+    margin-top: 40px;
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid .ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../photos/searchicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 12px 40px 12px 40px;
+    position:relative;
+}
+
+
+
+img.biggerThanContainer{
+  width:100%;
+}
+
+div.centerThisPart{
+  width: 50%;
+  margin: 0 auto;
+  left: 0; right: 0;
+}
+
+input.fillText{
+    width: 40%;
+}
+
+td.recipeTableItem {
+  height: 150px;
+  width: 370px;
+  display: inline-block;
+  margin-left:2%;
+  overflow: hidden;
+  margin-bottom: 5px;
+  /*border: 1px solid;*/
+}
+
+td.recipeAllTableItem {
+  height: 180px;
+  width: 370px;
+  display: inline-block;
+  margin-left:2%;
+  overflow: hidden;
+  margin-bottom: 5px;
+  /*border: 1px solid;*/
+}
+
+.center-cropped {
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 150px;
+  width: 150px;
+}
+
+td.more{
+  display: inline-block;
+  margin-left:0%;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+#HeaderitemsTable{
+  padding-right: 0.5%;
+  font-weight: bold;
+  font-size: 150%;
+  /*padding-left: 0.5%;*/
+}
+
+#HeaderitemsTableByRate{
+  padding-left: 0.5%;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#HeaderMyRecipes{
+  padding-left: 0.5%;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#feed {
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    margin-bottom: 4px;
+    border-bottom: thin solid;
+    text-align:center;
+    vertical-align:middle !important;
+}
+
+#logo{
+  /*margin: 0.5cm 0cm 0cm 1cm;*/
+  margin-left:2%;
+  height:50px;
+  width: 50px;
+  display:inline-flex;
+  float:left;
+  top:0;
+}
+
+#login{
+  background-color: rgba(255,255,255,0.8);
+}
+
+.loginBackground{
+  background-color: transparent;
+  background-image: url('../photos/background.png');
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+}
+
+@media screen and (max-width:959px){
+  #container{
+    width:100%;
+  }
+  .left-column{
+    width:48.2%;
+  }
+  .right-column{
+    width:48.2%;
+    margin-left:1%;
+  }
+
+  img{
+    width:50%;
+  }
+
+  td.recipeAllTableItem{
+    width:50%;
+    margin-left:1%;
+    margin-bottom: 10px;
+  }
+
+  td.recipeTableItem {
+    width:50%;
+    margin-left:1%;
+    margin-bottom: 10px;
+  }
+
+  #logo{
+    display:inline-block;
+  }
+
+}
+
+@media screen and (max-width:700px){
+
+  .left-column{
+    width:96%;
+    margin-left:2%;
+  }
+  .right-column{
+    width:96%;
+    margin-left:2%;
+  }
+  img{
+    width:50%;
+  }
+
+  div.centerThisPart{
+    width: 100%;
+    margin: 0 auto;
+    left: 0; right: 0;
+  }
+
+  td.recipeTableItem {
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  td.recipeAllTableItem {
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  td.more{
+    width:100%;
+  }
+
+  #logo{
+    margin-left:2%;
+    height:50px;
+    width: 50px;
+    float:left;
+    display:inline-block;
+  }
+
+  #login{
+    background-color: rgba(255,255,255,0.4);
+  }
+
+
+  .search{
+    margin-top: 0px;
+    height:10px;
+  }
+
+  .loginBackground{
+
+    background: url(../photos/background.png) no-repeat center center scroll;
+
+  }
+
+  #HeaderitemsTable{
+    width:100%;
+    display:inline-block;
+  }
+
+
+  #HeaderitemsTableByRate{
+    width:100%;
+    display:inline-block;
+  }
+
+  #HeaderMyRecipes{
+    width:100%;
+    display:inline-block;
+  }
+
+}
